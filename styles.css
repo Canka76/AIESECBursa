@@ -6,7 +6,6 @@ body {
 }
 
 .hero {
-
   background: url('images/Travel.jpg') center/cover no-repeat;
   color: darkgreen;
   text-align: center;
@@ -50,13 +49,13 @@ body {
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .brand-text {
   font-family: 'Tinos', serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: darkgreen;
 }
 
@@ -75,17 +74,17 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: bold;
+  color: darkgreen;
 }
 
 .category:hover {
-  color: darkgreen;
+  color: #72b82e;
   
 }
 
-
 .highlights {
   padding: 60px 20px;
-  background: #f9f9f9;
+  background: white;
 }
 
 .card-container {
@@ -183,5 +182,43 @@ body {
 }
 
 .back-about{
-    background-color: darkgrey;
+    background-color: white;
 }
+
+.hero-container{
+  position: relative;
+}
+
+.overlay-box {
+  margin: -120px auto 0;           /* negative top margin to pull it upward */
+  width: 64%;                     /* responsive width */
+  background-color: white;
+  position: relative;             /* relative positioning */
+  min-height: 134px;              /* minimum height */
+  padding: 10px 1px 0 !important; /* padding with !important to override */
+  box-sizing: border-box;         /* include padding in width */
+  text-align: center;
+  z-index: 2;
+  font-weight: bold;
+  line-height: 1.3;
+
+}
+
+
+/* Optional: Adjust padding and font size on very small screens */
+@media (max-width: 400px) {
+  .overlay-box {
+    padding: 10px;
+    width: 90%;
+    min-width: unset; /* allow it to shrink more */
+  }
+
+  .overlay-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .overlay-box p {
+    font-size: 1rem;
+  }
+}
+
