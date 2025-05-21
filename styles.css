@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: #333;
+}
+
+.hero {
+
+  background: url('images/Travel.jpg') center/cover no-repeat;
+  color: darkgreen;
+  text-align: center;
+  padding: 150px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    display: inline-block;
+    border-radius: 15px;  
+    background-color: white;
+    opacity: .75;
+}
+
+.hero h1 {
+  margin-bottom: 10px; /* reduce space below the heading */
+  font-size: 4rem;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.hero p{
+    margin-top: 0px;
+    font-family: 'Caveat', cursive;
+}
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; /* push left and right to edges */
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 20px;
+}
+
+.left-items,
+.right-items {
+  flex: 1; /* take available space */
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.brand-text {
+  font-family: 'Tinos', serif;
+  font-size: 1.2rem;
+  color: darkgreen;
+}
+
+.categories {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  gap: 20px;
+  flex: 0 1 auto;
+  justify-content: center;
+}
+
+.category {
+  display: inline-flex;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.category:hover {
+  color: darkgreen;
+  
+}
+
+
+.highlights {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  width: 100%;      /* full width by default */
+  flex: 1 1 200px;  /* allows responsive wrapping */
+  width: 100%;
+  display: block;
+  transition: transform 4s ease-in;
+  will-change: transform;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05); /* slightly brighter */
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 45%; /* roughly 2 per row with some gap */
+  }
+}
+
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px;
+}
+
+.card p {
+  margin: 0 15px 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: darkgreen;
+  color: white;
+}
+
+#handwritten {
+  font-family: 'Caveat', cursive;
+  background-color: transparent;
+}
+
+.nav-button {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* optional: inherits text color from parent */
+}
+
+.card-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit;        /* Keep original text color */
+  display: inline-block; /* Make the <a> behave like a block */
+}
+
+.card-link .card {
+  cursor: pointer; /* Visual cue for interactivity */
+}
+
+
+.about {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.about h1{
+    font-weight: bolder;
+}
+
+.highlight {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.back-about{
+    background-color: darkgrey;
+}
