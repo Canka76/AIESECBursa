@@ -3,6 +3,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: white;
   color: #333;
+  height: 100%;
 }
 
 .hero {
@@ -17,7 +18,7 @@ body {
     display: inline-block;
     border-radius: 15px;  
     background-color: white;
-    opacity: .75;
+    opacity: .65;
 }
 
 .hero h1 {
@@ -30,6 +31,7 @@ body {
 .hero p{
     margin-top: 0px;
     font-family: 'Caveat', cursive;
+    font-size: larger;
 }
 .top-row {
   display: flex;
@@ -62,7 +64,7 @@ body {
 .categories {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex: 0 1 auto;
   justify-content: center;
 }
@@ -137,8 +139,10 @@ body {
 .footer {
   text-align: center;
   padding: 20px;
-  background: darkgreen;
+  background: linear-gradient(to right, #006400, black);  
   color: white;
+  width: 100%;
+  
 }
 
 #handwritten {
