@@ -142,6 +142,8 @@ body {
   background: linear-gradient(to right, #006400, black);  
   color: white;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   
 }
 
@@ -225,4 +227,32 @@ body {
     font-size: 1rem;
   }
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .top-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 
