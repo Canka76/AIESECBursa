@@ -141,14 +141,23 @@ body {
 }
 
 .footer {
-  text-align: center;
+  display: flex;              /* Enable flexbox */
+  flex-direction: column;     /* Stack content vertically */
+  align-items: center;        /* Center horizontally */
+  justify-content: center;    /* Center vertically (if needed) */
+  text-align: center;         /* Center text inside */
   padding: 20px;
   background: linear-gradient(to right, #006400, black);  
   color: white;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  
+  box-sizing: border-box;     /* Ensures padding doesn't expand width */
+}
+
+/* Optional: Adjust padding for smaller screens */
+@media (max-width: 600px) {
+  .footer {
+    padding: 15px 10px;       /* Smaller padding on mobile */
+  }
 }
 
 #handwritten {
