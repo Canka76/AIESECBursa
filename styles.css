@@ -285,3 +285,114 @@ img {
   height: 100%;
   border: none; /* Optional: removes iframe border */
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+.centered {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel [data-carousel-slides] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.carousel [data-carousel-dots] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: 2vh;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;  
+}
+.carousel [data-carousel-dots] [data-carousel-dot] {
+  background-color: rgba(255, 255, 255, 1);
+  height: 0.78rem;
+  width: 0.78rem;
+  border-radius: 0.78rem;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.carousel [data-carousel-dots] [data-active] {
+  opacity: 1;
+}
+.carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 15px;
+  position: relative;
+  height: auto; /* No fixed height */
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Optional: limit height */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.carousel-button:hover,
+.carousel-button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.carousel-button[data-carousel-btn="prev"] {
+  left: 1rem;
+}
+
+.carousel-button[data-carousel-btn="next"] {
+  right: 1rem;
+}
