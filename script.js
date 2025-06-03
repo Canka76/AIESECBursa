@@ -50,6 +50,31 @@ function moveDot(i) {
   };
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+// Hamburger menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  // Toggle menu when clicking hamburger
+  hamburgerBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent this click from triggering the document click
+    hamburgerBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && mobileMenu.classList.contains('active')) {
+      hamburgerBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
+
+  // Prevent clicks inside menu from closing it
+  mobileMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Initialize carousel if it exists
   buttons.forEach((button) => button.addEventListener("click", slide(button)));
 });
