@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EP Testimonials</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet" /> 
+</head>
+<body>
+
+<div class="main-container">
+  <!-- Top Row -->
+  <section class="top-row">
+    <div class="left-items">
+      <a href="index.html"><img src="images/crocodile.png" alt="Crocodile Icon" class="icon" /></a>
+      <a href="index.html" class="card-link"><span class="brand-text">IGV Bursa</span></a>
+    </div>
+
+    <div class="categories">
+      <div class="category">Things to Do</div>
+      <div class="category">Eat & Drink</div>
+      <div class="category">EP Testimonials</div>
+    </div>
+
+    <div class="right-items">
+      <button class="hamburger-menu" aria-label="Menu" id="hamburgerBtn">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-items">
+      <div class="mobile-category">Things to Do</div>
+      <div class="mobile-category">Eat & Drink</div>
+      <a href="testimonials.html" class="mobile-category">EP Testimonials</a>
+      <div class="mobile-category">Our Opportunities</div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-container">
+    <header class="hero" style="background: url('images/Travel.jpg') center/cover no-repeat;">
+      <div class="header">
+        <h1>Welcome to Bursa</h1>
+        <p class="handwritten">Short-term opportunity, full-term memories...</p>
+      </div>
+    </header>
+  </div>
+
+  <!-- Overlay Box -->
+  <div class="overlay-box">
+    <h2>Explore the Timeless Beauty of Bursa!</h2>
+    <p>Discover the charm of Bursa, where ancient Ottoman heritage meets stunning natural beauty, from historic mosques to the slopes of Uludağ Mountain.</p>
+  </div>
+
+  <!-- Video and Content Section -->
+  <section class="video-content-section">
+    <div class="video-content-container">
+      <div class="video-side">
+        <div class="video-wrapper">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/Bc_cpoPz3vY" 
+            title="Bursa Travel Guide" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <div class="content-side">
+        <h2><img src="images/CrocodiloEPo1.png" alt="Crocodile Icon" class="icon">Eda Deniz - Romania</h2>
+        <p>Experience the rich history and vibrant culture of Bursa, a city where ancient traditions meet modern life. From the majestic Grand Mosque to the serene slopes of Uludağ Mountain, every corner tells a story of centuries past.</p>
+        <p>As Turkey's first Ottoman capital, Bursa offers visitors a unique blend of architectural marvels, culinary delights, and natural wonders. Whether you're exploring the historic silk market at Koza Han or savoring the original İskender kebab, you'll find yourself immersed in an authentic Turkish experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Second Video and Content Section -->
+  <section class="video-content-section">
+    <div class="video-content-container">
+      <div class="video-side">
+        <div class="video-wrapper">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/Bc_cpoPz3vY" 
+            title="Bursa Travel Guide" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <div class="content-side">
+        <h2><img src="images/crocodiloEPo2.png" alt="Crocodile Icon" class="icon">Can Karakoç - India</h2>
+        <p>Experience the rich history and vibrant culture of Bursa, a city where ancient traditions meet modern life. From the majestic Grand Mosque to the serene slopes of Uludağ Mountain, every corner tells a story of centuries past.</p>
+        <p>As Turkey's first Ottoman capital, Bursa offers visitors a unique blend of architectural marvels, culinary delights, and natural wonders. Whether you're exploring the historic silk market at Koza Han or savoring the original İskender kebab, you'll find yourself immersed in an authentic Turkish experience.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 IGV Bursa | Made with ❤️ by Can Karakoç</p>
+</footer>
+
+<!-- Add JavaScript for hamburger menu -->
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  hamburgerBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hamburgerBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && mobileMenu.classList.contains('active')) {
+      hamburgerBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
+
+  mobileMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+</script>
+
+</body>
+</html>

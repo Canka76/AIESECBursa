@@ -28,9 +28,23 @@
     </div>
 
     <div class="right-items">
-      <!-- Optional: Add right side icons or buttons -->
+      <button class="hamburger-menu" aria-label="Menu" id="hamburgerBtn">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
   </section>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-items">
+      <div class="mobile-category">Things to Do</div>
+      <div class="mobile-category">Eat & Drink</div>
+      <div class="mobile-category">Local Experiences</div>
+      <div class="mobile-category">Our Opportunities</div>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <div class="hero-container">
@@ -108,12 +122,32 @@
   </div>
 </div>
 
+<!-- Add JavaScript before closing body tag -->
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
   
-
   
+  // Toggle menu when clicking hamburger
+  hamburgerBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent this click from triggering the document click
+    hamburgerBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
 
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && mobileMenu.classList.contains('active')) {
+      hamburgerBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
 
-
+  // Prevent clicks inside menu from closing it
+  mobileMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+</script>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
