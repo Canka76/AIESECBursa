@@ -786,3 +786,50 @@ body.menu-open {
 .social-link:hover {
   color: #72b82e;
 }
+
+@media (max-width: 480px) {
+  .connect-section {
+    padding: 8px;
+  }
+
+  .connect-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px !important;
+    margin-top: 8px !important;
+  }
+
+  .contact-info {
+    gap: 12px;
+  }
+
+  .contact-group {
+    gap: 10px;
+  }
+
+  .contact-item {
+    gap: 4px;
+  }
+
+  .contact-item span:first-child {
+    font-size: 1rem;
+  }
+
+  .contact-item span,
+  .contact-label {
+    font-size: 0.9rem;
+  }
+
+  .contact-item a {
+    font-size: 0.85rem;
+  }
+
+  .social-links {
+    gap: 15px;
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+
+  .social-link {
+    font-size: 0.9rem;
+  }
+}
